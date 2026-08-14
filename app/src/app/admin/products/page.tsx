@@ -1,9 +1,19 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { products } from "@/lib/mock-data";
 import { formatCurrency } from "@/lib/utils";
+import { useState } from "react";
 
 export default function AdminProductsPage() {
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setMessage("New product draft created successfully.");
+  };
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
@@ -11,8 +21,12 @@ export default function AdminProductsPage() {
           <p className="text-xs uppercase tracking-[0.18em] text-slate-500">Inventory</p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight">Products</h1>
         </div>
-        <Button className="rounded-full">Add product</Button>
+        <form onSubmit={handleSubmit}>
+          <Button type="submit" className="rounded-full">Add product</Button>
+        </form>
       </div>
+
+      {message ? <p className="text-sm text-emerald-700">{message}</p> : null}
 
       <Card className="overflow-hidden">
         <div className="overflow-x-auto">

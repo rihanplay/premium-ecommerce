@@ -36,8 +36,8 @@ export default function HomePage() {
                     Discover refined essentials for home, style, and rituals across the modern Indian lifestyle.
                   </p>
                   <div className="mt-8 flex flex-wrap gap-3">
-                    <Button className="bg-white text-slate-900 hover:bg-stone-100">Shop collection</Button>
-                    <Button variant="outline" className="border-white/25 bg-white/5 text-white hover:bg-white/10">Explore categories</Button>
+                    <Button href="/shop" className="bg-white text-slate-900 hover:bg-stone-100">Shop collection</Button>
+                    <Button href="/categories" variant="outline" className="border-white/25 bg-white/5 text-white hover:bg-white/10">Explore categories</Button>
                   </div>
                   <div className="mt-8 flex items-center gap-6 text-sm text-stone-200">
                     <span className="flex items-center gap-2"><BadgeCheck className="h-4 w-4 text-emerald-400" /> Trusted quality</span>
@@ -154,7 +154,7 @@ export default function HomePage() {
                         )}
                       </div>
                     </div>
-                    <Button size="sm" className="gap-2 rounded-full">
+                    <Button href={`/products/${product.slug}`} size="sm" className="gap-2 rounded-full">
                       <ShoppingBag className="h-3.5 w-3.5" /> Add
                     </Button>
                   </div>

@@ -33,13 +33,13 @@ export function StoreHeader() {
           </div>
 
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" className="hidden h-10 w-10 rounded-full p-0 sm:inline-flex">
+            <Button href="/wishlist" variant="ghost" size="sm" className="hidden h-10 w-10 rounded-full p-0 sm:inline-flex">
               <Heart className="h-4 w-4" />
             </Button>
-            <Button variant="ghost" size="sm" className="hidden h-10 w-10 rounded-full p-0 sm:inline-flex">
+            <Button href="/profile" variant="ghost" size="sm" className="hidden h-10 w-10 rounded-full p-0 sm:inline-flex">
               <User className="h-4 w-4" />
             </Button>
-            <Button variant="secondary" size="sm" className="h-10 gap-2 rounded-full px-3">
+            <Button href="/cart" variant="secondary" size="sm" className="h-10 gap-2 rounded-full px-3">
               <ShoppingBag className="h-4 w-4" />
               <span className="hidden sm:inline">Cart</span>
               <span className="rounded-full bg-slate-900 px-1.5 py-0.5 text-[10px] text-white">3</span>
